@@ -4,9 +4,11 @@ let genAI: GoogleGenAI | null = null;
 
 function getGenAI() {
   if (!genAI) {
-    const apiKey = process.env.GEMINI_API_KEY || process.env.Gemini_API_Key;
-    if (!apiKey || apiKey === "MY_GEMINI_API_KEY") {
-      throw new Error("GEMINI_API_KEY is missing or invalid. Please set it in the Secrets panel.");
+    // In Vite, environment variables must be prefixed with VITE_ to be exposed to the client
+    const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+
+    if (!apiKey || apiKey === "YOUR_API_KEY_HERE" || apiKey === "MY_GEMINI_API_KEY") {
+      throw new Error("VITE_GEMINI_API_KEY is missing. Please add it to your .env file or Secrets panel.");
     }
     genAI = new GoogleGenAI({ apiKey });
   }
