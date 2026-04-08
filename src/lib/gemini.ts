@@ -4,7 +4,7 @@ let genAI: GoogleGenAI | null = null;
 
 function getGenAI() {
   if (!genAI) {
-    const apiKey = process.env.GEMINI_API_KEY;
+    const apiKey = process.env.GEMINI_API_KEY || process.env.Gemini_API_Key;
     if (!apiKey || apiKey === "MY_GEMINI_API_KEY") {
       throw new Error("GEMINI_API_KEY is missing or invalid. Please set it in the Secrets panel.");
     }
