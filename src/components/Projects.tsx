@@ -181,7 +181,6 @@ export default function Projects() {
                 src={selectedImage}
                 alt="Project Preview"
                 className="w-full h-full object-contain rounded-xl shadow-2xl"
-                referrerPolicy="no-referrer"
               />
             </motion.div>
           </motion.div>
