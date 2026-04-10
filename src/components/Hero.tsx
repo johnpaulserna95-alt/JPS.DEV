@@ -17,8 +17,10 @@ export default function Hero() {
             src="/my-avatar.png"
             alt="John Paul Serna"
             className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
             loading="lazy"
+            onError={(e) => {
+              (e.target as HTMLImageElement).src = "https://picsum.photos/seed/johnpaul/400/400";
+            }}
           />
         </div>
         <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 bg-primary text-black text-[9px] font-black font-mono tracking-[0.15em] uppercase px-3 py-1 rounded-full whitespace-nowrap flex items-center gap-1.5">

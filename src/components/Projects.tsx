@@ -52,6 +52,11 @@ const projects: Project[] = [
 export default function Projects() {
   const [floatingIndex, setFloatingIndex] = useState<number | null>(null);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [imageErrors, setImageErrors] = useState<Record<number, boolean>>({});
+
+  const handleImageError = (index: number) => {
+    setImageErrors(prev => ({ ...prev, [index]: true }));
+  };
 
   const toggleFloat = (e: React.MouseEvent, index: number) => {
     e.stopPropagation();
@@ -95,7 +100,7 @@ export default function Projects() {
             className={`glass glow rounded-[1.25rem] overflow-hidden group transition-all duration-400 cursor-pointer hover:-translate-y-1.5 hover:shadow-[0_20px_60px_rgba(var(--accent-rgb),0.12)] ${floatingIndex === index ? 'shadow-[0_30px_70px_rgba(var(--accent-rgb),0.2)]' : ''}`}
           >
             <div className="h-[190px] overflow-hidden relative bg-[rgba(var(--accent-rgb),0.05)]" style={project.gradient ? { background: project.gradient } : {}}>
-              {project.image || project.floatImage ? (
+              {(project.image || project.floatImage) && !imageErrors[index] ? (
                 <motion.img
                   key={floatingIndex === index ? 'floating' : 'static'}
                   initial={{ opacity: 0.8 }}
@@ -103,11 +108,10 @@ export default function Projects() {
                   src={floatingIndex === index && project.floatImage ? project.floatImage : project.image}
                   alt={project.title}
                   className="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 block"
-                  referrerPolicy="no-referrer"
+                  onError={() => handleImageError(index)}
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center opacity-15 text-primary">
-                  {/* Using icons based on project type */}
                   <project.icon size={72} />
                 </div>
               )}
