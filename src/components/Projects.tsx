@@ -19,7 +19,7 @@ const projects: Project[] = [
   {
     title: "AI-Native Portfolio",
     description: "Liquid-glass aesthetics with chat-style UI, dark/light mode, kinetic interactions, and fluid mouse gradients. Built with vanilla HTML/CSS/JS.",
-    image: "https://lh3.googleusercontent.com/aida/ADBb0ujJrqKD1l7rgij4k9u-xjaY6P6M3agW4XYfnkwOItdOxxYZAvWIce6SXbAVLdI1IczYMansyz9_KbE4GBeyMhRi-S40rYZPaC4qE4rWa8TurLsL36SbeSUDhei7Z4y61HThEfhtGMLfuK7dFGYp5e3OXFLG2pa8D3A9RbWFDTz5F96Y-dRFVgGr5XiY26iQUmMsweOUePmSC6SnmWAVgglXMHFGIuT5qqkxOj1DcjOnHG-NhTy5xZs5OVyYHlezzZ-Iph6O2y9AxQQ",
+    image: "/my-project.png",
     floatImage: "https://opengraph.githubassets.com/1/johnpaulserna95-alt/My-Porfolio",
     repoUrl: "https://github.com/johnpaulserna95-alt/My-Porfolio",
     category: "PORTFOLIO",
@@ -30,7 +30,7 @@ const projects: Project[] = [
   {
     title: "Real-Time Data Dashboard",
     description: "Complex architectural system dashboards with real-time data streaming, live metrics, and automated alerting pipelines.",
-    image: "https://lh3.googleusercontent.com/aida/ADBb0ujhUfy9-96mpgmjusZFgizNd1rGlqvHwpIpz8iqOMV9Y3uIwrBTavcsm9IzaWMNtcPMZvaP6rsH9rssEax2W8FMOHbXRW1JnTwZQkciSqXEhF_glfXuYWB28D6ohw8XvM-j2Se0dKsqRB-dj1zN31dJ4uA6N6DEuYM21dVuPnmwB4WAJjv823cRMJeEPdFNBjbxguE3wtXpVNdUy9gm1Llq6aLtdpCAK9N0tGtsVRMAKs53oMPuqh3DyLHsbfblF0OrtQYWTUdfIg",
+    image: "/my-project1.png",
     floatImage: "https://opengraph.githubassets.com/1/johnpaulserna95-alt/My-Porfolio",
     repoUrl: "https://github.com/johnpaulserna95-alt/My-Porfolio",
     category: "DASHBOARD",

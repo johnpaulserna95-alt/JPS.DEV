@@ -14,10 +14,11 @@ export default function Hero() {
       >
         <div className="w-[140px] h-[140px] rounded-full overflow-hidden border-2 border-[rgba(var(--accent-rgb),0.3)] shadow-[0_0_40px_rgba(var(--accent-rgb),0.15)]">
           <img
-            src="https://lh3.googleusercontent.com/aida/ADBb0ui7y7oWOKFSwI7ZJKeT1i_U_TSHb0DI--07L2HruXqVhIlR15yG8_sxY7KfJ_ilTQvUA1ujITBo_KbbzQuF2G7coLZOsspgg8RyDXlUr1FUac04FeWO1zPwC95e7ul-qPbEUNVXKXcDHbR9vNSDPPjYOvQfYclvdZXI8u06jwwHZfnU1eU18Xz6JzofdU2YHJkPmvnn6prgquhmyFBGe7IYXAcYYNzPCNleoICyN8EXrl1Mx_5cc7VHjQR2YM77yusQcRrRq0p-pg"
+            src="/my-avatar.png"
             alt="John Paul Serna"
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
+            loading="lazy"
           />
         </div>
         <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 bg-primary text-black text-[9px] font-black font-mono tracking-[0.15em] uppercase px-3 py-1 rounded-full whitespace-nowrap flex items-center gap-1.5">
